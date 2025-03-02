@@ -4,13 +4,10 @@ import { auth } from "../_lib/auth";
 export default async function Navigation() {
 
   const session =  await auth();
-  console.log(session);
-  
-
 
   return (
-    <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center">
+    <nav className="z-10 text-lg  md:text-xl">
+      <ul className="flex flex-col md:flex-row gap-3 md:gap-16 justify-end items-end md:items-center">
         <li>
           <Link href="/cabins" className="hover:text-accent-400 transition-colors">
             Cabins
@@ -34,7 +31,7 @@ export default async function Navigation() {
              href="/account"
              className="hover:text-accent-400 transition-colors"
             >
-             Guest area
+             Guest
             </Link>
           )
           }

@@ -14,10 +14,10 @@ async function Reservation({cabin}) {
   return (
     
     <div>
-        <div className="grid grid-cols-1 border border-primary-800 min-h-[400px]">
-        <DateSelector bookedDates={bookedDates} cabin={cabin} settings={settings}/>
-        {session ?  <ReservationForm  cabin={cabin} user={session.user} /> : <LoginMessage/>}
-        </div>
+      <div className="flex flex-col md:flex-row border border-primary-800 min-h-[400px] gap-6 md:gap-16">
+      <DateSelector bookedDates={bookedDates} cabin={cabin} settings={settings}/>
+      {session ?  <ReservationForm cabin={cabin} user={session.user} /> : <LoginMessage/>}
+      </div>
     </div>
   )
 }

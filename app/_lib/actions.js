@@ -98,8 +98,6 @@ export async function updateBooking(formData) {
     .from("bookings")
     .update(updateData)
     .eq("id", bookingId)
-    .select()
-    .single();
 
   // 5) Error handling
   if (error) throw new Error("Booking could not be updated");
